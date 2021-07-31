@@ -36,10 +36,11 @@ def main():
     driver.get(sys.argv[sys.argv.index("--url") + 1])
 
     with open("cookie.txt", "r") as fp:
-        cookies = json.load(fp)
-        for cookie in cookies:
-            cookie.pop('sameSite')
-            driver.add_cookie(cookie)
+        if len(fp.read()) > 0:
+            cookies = json.load(fp)
+            for cookie in cookies:
+                cookie.pop('sameSite')
+                driver.add_cookie(cookie)
 
     driver.get(sys.argv[sys.argv.index("--url") + 1])
 
