@@ -1,5 +1,6 @@
 import os
 import sys
+import json
 from selenium import webdriver
 from selenium_stealth import stealth
 import chromedriver_autoinstaller
@@ -34,12 +35,11 @@ def main():
 
     driver.get(sys.argv[sys.argv.index("--url") + 1])
 
-    with open('cookie.txt', 'r') as f:
-        lines = f.readlines()
-        for line in lines:
-            name_c = line.strip().split(":")[0]
-            value_c = line.strip().split(":")[1]
-            driver.add_cookie({'name': name_c, 'value': value_c})
+    with open("cookie.txt", "r") as fp:
+        cookies = json.load(fp)
+        for cookie in cookies:
+            cookie.pop('sameSite')
+            driver.add_cookie(cookie)
 
     driver.get(sys.argv[sys.argv.index("--url") + 1])
 
