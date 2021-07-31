@@ -17,7 +17,7 @@ pip install selenium-stealth
 py .\main.py --url "URL"
 ```
 
-## Demo
+## Demo (Real Time)
 
 ![](https://cdn.discordapp.com/attachments/824817184135184398/871036412374417408/selenium.gif)
 
