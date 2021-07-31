@@ -17,14 +17,18 @@ pip install selenium-stealth
 py .\main.py --url "URL"
 ```
 
+##Demo
+
+![](https://cdn.discordapp.com/attachments/824817184135184398/871036412374417408/selenium.gif)
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 
-# Acknowledgement
+## Acknowledgement
 Thanks to Satsuoni for his very efficient extension
 
-# Warning
+## Warning
 You will be solely responsible for any damage you cause to the industry through these utilities
 
 ## License
